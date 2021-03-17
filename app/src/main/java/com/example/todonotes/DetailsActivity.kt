@@ -33,7 +33,7 @@ class DetailsActivity : AppCompatActivity() {
 
         binding.button.setOnClickListener {
            binding.timePicker.setIs24HourView(true)
-            val time="${binding.timePicker.hour}/${binding.timePicker.minute}"
+            val time="${binding.timePicker.hour}:${binding.timePicker.minute}"
             val note=Note(intent.getIntExtra(Extras_ID,0),
                 binding.customTitle.editText?.text.toString()
                 ,binding.customDesc.editText?.text.toString(),
