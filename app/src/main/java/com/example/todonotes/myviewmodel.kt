@@ -6,11 +6,17 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
 
 @HiltViewModel
-class myviewmodel @Inject constructor(private val repo: Repo,val app:Application): AndroidViewModel(app) {
+class myviewmodel @Inject constructor(
+    private val repo: Repo,
+    val app:Application
 
-    fun getallnotes(): LiveData<List<Note>> {
+): AndroidViewModel(app) {
+
+    fun getallnotes(): Flow<List<Note>>{
 
 
         return repo.getallnotes()

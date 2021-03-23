@@ -11,13 +11,13 @@ class NoteApp :Application (){
     companion object{
         const  val CHANNEL_ID = "1"
     }
-    var CHANNEL_NAME = "my channel"
+    private val CHANNEL_NAME = "my channel"
     override fun onCreate() {
         super.onCreate()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val importance = NotificationManager.IMPORTANCE_DEFAULT;
-            val channel =NotificationChannel(CHANNEL_ID, CHANNEL_NAME, importance);
-            channel.setDescription("my channel");
+            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            val channel =NotificationChannel(CHANNEL_ID, CHANNEL_NAME, importance)
+            channel.description="my channel"
             val notificationManager = getSystemService(NotificationManager::class.java)
             notificationManager.createNotificationChannel(channel)
 
