@@ -1,4 +1,4 @@
-package com.example.todonotes
+package com.example.todonotes.UI
 
 import android.content.Intent
 import android.os.Build
@@ -12,9 +12,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.todonotes.helper.NotesAdapter
+import com.example.todonotes.R
 import com.example.todonotes.R.color.design_default_color_secondary
 import com.example.todonotes.databinding.ActivityMainBinding
-import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
@@ -22,7 +23,6 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.flow.buffer
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {

@@ -1,12 +1,9 @@
-package com.example.todonotes
+package com.example.todonotes.DataBase
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.room.*
 import androidx.room.Dao
+import com.example.todonotes.entities.Note
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
 
 @Dao
 interface Dao {
@@ -17,7 +14,7 @@ interface Dao {
     @Update
     suspend fun updatenote(note: Note)
     @Delete
-    suspend fun deletenote(note: Note )
+    suspend fun deletenote(note: Note)
 
     @Query("DELETE FROM Note")
    suspend fun  delete_all_notes()

@@ -1,4 +1,4 @@
-package com.example.todonotes
+package com.example.todonotes.UI
 
 import android.app.AlarmManager
 import android.app.PendingIntent
@@ -6,16 +6,12 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.widget.TimePicker
 import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.AlarmManagerCompat
-import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationManagerCompat
-import androidx.core.view.get
+import com.example.todonotes.Services.MyReceiver
+import com.example.todonotes.entities.Note
 import com.example.todonotes.databinding.ActivityDetailsBinding
-import com.google.android.material.timepicker.TimeFormat
 import dagger.hilt.android.AndroidEntryPoint
 import java.text.SimpleDateFormat
 import java.util.*

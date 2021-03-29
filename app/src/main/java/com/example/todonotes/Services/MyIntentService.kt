@@ -1,4 +1,4 @@
-package com.example.todonotes
+package com.example.todonotes.Services
 
 import android.app.IntentService
 import android.app.Service

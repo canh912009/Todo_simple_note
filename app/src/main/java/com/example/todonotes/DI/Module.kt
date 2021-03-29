@@ -1,7 +1,9 @@
-package com.example.todonotes
+package com.example.todonotes.DI
 
 import android.app.Application
 import androidx.room.Room
+import com.example.todonotes.DataBase.Dao
+import com.example.todonotes.DataBase.RoomDB
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,15 +1,12 @@
-package com.example.todonotes
+package com.example.todonotes.helper
 
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.core.widget.addTextChangedListener
-import androidx.core.widget.doOnTextChanged
 import androidx.recyclerview.widget.RecyclerView
-import com.example.todonotes.databinding.CardBinding
+import com.example.todonotes.entities.Note
+import com.example.todonotes.R
 
 class NotesAdapter : RecyclerView.Adapter<NotesAdapter.viewholder>() {
     private var Noteslist: List<Note> = ArrayList<Note>()

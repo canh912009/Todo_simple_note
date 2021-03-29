@@ -1,4 +1,4 @@
-package com.example.todonotes
+package com.example.todonotes.entities
 
 import android.os.Parcelable
 import androidx.room.ColumnInfo
